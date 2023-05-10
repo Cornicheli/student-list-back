@@ -26,4 +26,4 @@ alumnos.forEach((e) => {
         apellido: e.apellido,
         edad: e.edad,
     });
-  });
+});
