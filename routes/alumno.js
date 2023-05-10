@@ -1,4 +1,4 @@
-let router = require("express").Router();
+const router = require("express").Router();
 let { create, read, update, destroy } = require("../controllers/alumnos");
 
 router.post("/create", create);
