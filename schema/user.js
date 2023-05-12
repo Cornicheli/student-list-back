@@ -13,7 +13,6 @@ const schema = Joi.object({
     "string.min":"Por favor, ingresa tu apellido completo",
     "string.max": "Por favor, verifica tu apellido",
   }),
-  role: Joi.string().valid("Alumno", "Profesor"),
   email: Joi.string().required().min(3).max(30).email().messages({
     "string.base": "Por favor, ingresa palabras",
     "any.required": "Por favor, ingresa tu correo electrónico completo",

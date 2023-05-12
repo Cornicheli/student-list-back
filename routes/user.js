@@ -1,9 +1,9 @@
 const router = require("express").Router()
 const schema = require("../schema/user")
-// let  validator  = require("../middlewares/validator")
-let { registro } = require('../controllers/user')
-let { accountExistsSignUp, validator } = require("../middlewares")
-// let  accountExists  = require("../middlewares/accountExistsSignUp")
+let  validate  = require("../middlewares/validator")
+let { registrar } = require('../controllers/user')
+// let { accountExistsSignUp, validator } = require("../middlewares")
+let  accountExistsSignUp  = require("../middlewares/accountExistsSignUp")
 
-router.post("/mail",  validator(schema), accountExistsSignUp, registro)
-module.exports = router 
+router.post("/",  validate(schema), accountExistsSignUp, registrar)
+module.exports = router
