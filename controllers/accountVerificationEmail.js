@@ -32,7 +32,7 @@ function getEmailBody({ email, host, code }) {
         <div class="card-body">
             <h2 class="card-title" >Your email is ${email}</h2>
             <h2 class="card-text"> Porfavor hace click para verificar la cuenta </h2>
-            <a href="${host}/api/auth/verify/${code}"> Verify my account. </a>
+            <a href="${host}/auth/verify/${code}"> Verify my account. </a>
         </div>
     <div/>
     `;

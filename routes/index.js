@@ -4,6 +4,6 @@ const alumno = require('./alumno')
 const user = require('./user')
 
 router.use('/alumno', alumno)
-router.use('/register', user)
+router.use('/auth', user)
 
 module.exports = router;

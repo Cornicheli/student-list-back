@@ -4,6 +4,7 @@ let users = [
         apellido: "Rodriguez",
         email: "feric.rodriguez@gmail.com",
         password: "developer1234",
+        turno: "tarde",
         code: "hola1234",
         verified: true,
         logged: true,
@@ -20,6 +21,7 @@ const User = require("../User");
             apellido: e.lastName,
             email: e.email,
             password: e.password,
+            turno: e.turno,
             verified: e.verified,
             logged: e.logged,
             code: e.code
