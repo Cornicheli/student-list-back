@@ -3,7 +3,7 @@ const accountExistsSignUp = require("./accountExistsSignUp");
 const accountHasBeenVerified = require("./accountHasBeenVerified");
 const errorHandler = require("./errorHandler");
 const mustSignin = require("./mustSignin");
-const validator = require("./validator");
+const validate = require("./validator");
 const verifyComment = require("./verifyComment");
 
 module.exports = {
@@ -12,6 +12,6 @@ module.exports = {
     accountHasBeenVerified,
     errorHandler,
     mustSignin,
-    validator,
+    validate,
     verifyComment
 };

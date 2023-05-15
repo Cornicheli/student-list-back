@@ -3,12 +3,14 @@ let profesores = [
         "nombre" : "franco",
         "apellido": "nose",
         "role": "profesor",
+        "turno" : "tarde",
         "id": "6452b0af3b640185ed48a4ba",
     },
     {
         "nombre" : "noraly",
         "apellido": "nose1",
         "role": "profesor",
+        "turno" : "tarde",
         "id" :"6452b0af3b640185ed48a4bb"
 
     },
@@ -16,6 +18,7 @@ let profesores = [
         "nombre" : "nadia",
         "apellido": "nose1",
         "role": "profesor",
+        "turno" : "tarde",
         "id" : "6452b0af3b640185ed48a4bc"
     },
 
@@ -31,5 +34,6 @@ profesores.forEach((e) =>{
         apellido: e.apellido,
         role: e.role,
         id: e.id,
+        turno: e.turno,
     })
 })
