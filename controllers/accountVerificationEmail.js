@@ -23,15 +23,15 @@ function getTransport(client) {
     });
 }
 
-function getEmailBody({ email, host, code }) {
+function getEmailBody( { email, host, code } ) {
   return `
-    <div class="card text-center">
-        <div class="card-header">
-            <h1 class="card-header">Hola Profesor, Bienvenido a su lista de alumnos.</h1>
+    <div>
+        <div className="card-header">
+            <h1> Hola Profesor, Bienvenido a su lista de alumnos. </h1>
         <div/>
-        <div class="card-body">
-            <h2 class="card-title" >Your email is ${email}</h2>
-            <h2 class="card-text"> Porfavor hace click para verificar la cuenta </h2>
+        <div className="card-body">
+            <h2> Your email is ${email} </h2>
+            <h2> Porfavor hace click para verificar la cuenta </h2>
             <a href="${host}/auth/verify/${code}"> Verify my account. </a>
         </div>
     <div/>
@@ -45,7 +45,7 @@ const accountVerificationEmail = async (mailNewUser, codeCripto) => {
   const mailOptions = {
     from: GOOGLE_USER,
     to: mailNewUser,
-    subject: "Verify your new account in My Tinerary",
+    subject: "Verify your new account in Ituzaingo",
     html: getEmailBody({
       email: mailNewUser,
       code: codeCripto,
