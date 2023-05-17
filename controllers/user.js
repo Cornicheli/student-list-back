@@ -10,13 +10,13 @@ const {userSignedUpResponse, userNotFoundResponse, invalidCredentialsResponse, u
 const controller = {
 
     register: async (req, res, next) => {
-        let { nombre, apellido, email, password, turno } = req.body
+        let { nombre, apellido, email, password } = req.body
         let verified = false;
         let logged = false;
         let code = crypto.randomBytes(10).toString("hex");
         password = bcryptjs.hashSync(password, 10);
         try {
-            await User.create({ nombre, apellido, email, password, turno, verified, logged, code, });
+            await User.create({ nombre, apellido, email, password, verified, logged, code, });
             await accountVerificationEmail(email, code);
             return userSignedUpResponse(req, res);
         } catch (error) {
@@ -29,7 +29,7 @@ const controller = {
         try {
             let user = await User.findOneAndUpdate({ code:code }, { verified:true}, { new:true})
             if(user){
-                return res.redirect('https://www.youtube.com/')
+                return res.redirect('http://localhost:5173/')
             }
             return userNotFoundResponse(req, res)
         } catch (error) {
