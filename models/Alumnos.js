@@ -5,6 +5,8 @@ const schema = new mongoose.Schema({
     apellido: {type: String, required: true},
     edad: {type: Number, required: true},
     turno: {type: String, required: true},
+    horario: {type: String, required: true},
+    grupo: {type: String, required: true},
 })
 
 const Alumnos = mongoose.model('alumnos', schema)
