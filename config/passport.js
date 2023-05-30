@@ -19,7 +19,9 @@ passport.use(
             nombre: user.nombre,
             apellido: user.apellido,
             email: user.email,
-            turno: user.turno,
+            password: user.password,
+            // turno: user.turno,
+            verified: user.verified,
             logged: user.logged,
             id: user._id,
           };
