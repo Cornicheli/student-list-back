@@ -2,17 +2,20 @@ let alumnos = [
     {
         "nombre" : "gabriel",
         "apellido": "cornide",
-        "edad": 6
+        "edad": 6,
+        "turno" : "tarde"
     },
     {
         "nombre" : "agustin",
         "apellido": "cornide",
-        "edad": 8
+        "edad": 8,
+        "turno" : "tarde"
     },
     {
         "nombre" : "thiago",
         "apellido": "cornide",
-        "edad": 8
+        "edad": 8,
+        "turno" : "tarde"
     },
 ]
 
@@ -25,5 +28,6 @@ alumnos.forEach((e) => {
         nombre: e.nombre,
         apellido: e.apellido,
         edad: e.edad,
+        turno: e.turno
     });
-  });
+});
