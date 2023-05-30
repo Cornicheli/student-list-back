@@ -1,6 +1,6 @@
 const passport = require("passport");
 const passportJwt = require("passport-jwt");
-const { KEY_JWT } = process.env
+const KEY_JWT = process.env.KEY_JWT;
 const User = require("../models/User");
 
 passport.use(
@@ -20,7 +20,7 @@ passport.use(
             apellido: user.apellido,
             email: user.email,
             password: user.password,
-            // turno: user.turno,
+            code: user.code,
             verified: user.verified,
             logged: user.logged,
             id: user._id,
